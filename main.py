@@ -210,6 +210,8 @@ def toot():
         api_base_url = session['uri'])
     path = "./static/out/" + img + ".png"
     media_files = [mstdn.media_post(media, "image/png") for media in [path]]
+    if text == "":
+        text = "."
     status = mstdn.status_post(status=text, media_ids=media_files, visibility=vsbl)
     url = status['url']
     return render_template('toot.html', toot_url=url, status="logout", site_url=app.config['SITE_URL'])
