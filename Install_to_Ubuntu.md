@@ -28,7 +28,8 @@ $ sudo apt install build-essential \
     zlib1g-dev \
     ca-certificates \
     git \
-    python-dev
+    python-dev \
+    mecab
 ```
 
 `$ sudo vi /etc/systemd/system/tootcloud.service`
@@ -100,6 +101,8 @@ $ sudo apt install build-essential \
 ```
 
 `$ pip install -r requirements.txt`
+
+`$ pip install matplotlib`
 
 `$ exit`
 
