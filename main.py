@@ -13,6 +13,7 @@ import MeCab
 
 app = Flask(__name__)
 app.config.from_object('config')
+app.config.update(SESSION_COOKIE_SECURE=True,SESSION_COOKIE_HTTPONLY=True,SESSION_COOKIE_SAMESITE='Lax')
 db = TinyDB('db.json')
 qwy = Query()
 
